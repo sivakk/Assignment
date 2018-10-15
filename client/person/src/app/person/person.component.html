@@ -1,0 +1,70 @@
+<form #frm="ngForm" (ngSubmit)="addPerson(frm)" *ngif="!toogleForm">
+  <h2 id="add_person">Add Person</h2>
+  <div class="form-group">
+    <label for="">Name:</label>
+    <input type="text" class="form-control" name="personName" value="" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="">Phone NUmber:</label>
+    <input type="number" class="form-control" name="phoneNumber" value="" ngModel required>
+  </div>
+  <button type="submit" name="button" class="btn btn-sucess" [disabled]=frm.invalid>Add</button>
+
+
+
+</form>
+
+<form #editForm="ngForm" (ngSubmit)="editPerson(editForm)" *ngIf="toggleForm">
+  <h2 id="edit_person">Edit Person</h2>
+  <div class="form-group">
+    <label for="">Name:</label>
+    <input type="text" class="form-control" name="personName" value="" [ngModel]=selectedPerson.personName>
+  </div>
+  <div class="form-group">
+    <label for="">Phone NUmber:</label>
+    <input type="number" class="form-control" name="phoneNumber" value="" [ngModel]=selectedPerson.personNumber>
+  </div>
+  <button type="submit" name="button" class="btn btn-sucess">Add</button>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="people_list">Peoples List</h2>
+<div class="">
+
+  <div *ngFor="let people of peoplelist" class="">
+    <div id="checkbox">
+      <input type="checkbox" name="">
+    </div>
+    <div id="item-name">
+      {{person.personName}}
+    </div>
+    <div id="item-num">
+      {{person.phoneNumber}}
+    </div>
+    <div id="edit-btn">
+      <button type="button" name=button class="btn btn-primary" (click)="showeditForm(person)">Edit </button>
+    </div>
+    <div id="delete-btn">
+      <button type="button" name="button" class="btn btn-danger" (click)="deletePerson(person._id)">Delete</button>
+    </div>
+  </div>
+
+
+
+
+</div>
