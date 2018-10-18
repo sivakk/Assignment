@@ -3,11 +3,11 @@ div {
   margin-left: 65px;
 }
 
-#pepole_list {
+#people_list {
   margin-top: 55px;
-  margin-left: 125px;
+  margin-left: 126px;
   margin-bottom: 65px;
-  font-size: 60px;
+  font-size: 60px
 }
 
 form {
@@ -16,15 +16,18 @@ form {
   margin-top: 35px;
 }
 
-button.btn.btn-sucess {
-  margin-top: 35px;
-}
-
-#add_person {
+#add-person {
   margin-top: 35px;
   margin-left: 0px;
   margin-bottom: 65px;
-  font-size: 60px;
+  font-size: 60px
+}
+
+#edit-person {
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-bottom: 65px;
+  font-size: 60px
 }
 
 label {

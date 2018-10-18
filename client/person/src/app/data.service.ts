@@ -10,7 +10,7 @@ export class DataService {
 
   getPersons() {
     return this.http
-      .get("http://localhost/3000/api/test")
+      .get("http://localhost:3000/api/test")
       .pipe(map(res => res.json()));
   }
 
@@ -32,7 +32,7 @@ export class DataService {
     let headers = new Headers();
     headers.append("content-Type", "application/json");
     return this.http
-      .put("http://localhost:3000/api/person/" + newPerson._id, {
+      .put("http://localhost:3000/api/person/" + newPerson._id, newPerson, {
         headers: headers
       })
       .pipe(map(res => res.json()));
