@@ -8,8 +8,9 @@
     <label for="">PhoneNumber:</label>
     <input type="text" class="form-control" name="phoneNumber" value="" ngModel required>
   </div>
+  <br>
   <button type="submit" name="button" class="btn btn-success" [disabled]=frm.invalid>Add person</button>
-</form><br>
+</form>
 
 <form (ngSubmit)="editPerson(editform)" #editform="ngForm" *ngIf="toggleForm">
   <h2 id="edit-person">Edit Person</h2>
@@ -38,7 +39,7 @@
 
 
 
-<br>
+
 <h2 id="people_list">People List</h2>
 <div *ngFor="let item of shoppingList">
 
